@@ -57,77 +57,35 @@
     <i class="bx bx-menu"></i>
   </button>
 
-  <!-- Header -->
-  <div class="header-tops">
-    <div class="container">
-      <h1>Francisco Oliveira</h1>
-      <h2>I'm a <span class="typed" data-typed-items="Software Engineer,Network Engineer,Developer,Cybersecurity Enthusiast"></span></h2>
-      
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="experience.html">Experience</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="links.html">Resume & Links</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+  <!-- Navigation -->
+  <nav class="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="links.html">Resume & Links</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-      <div class="social-links">
-        <a href="https://github.com/francisc-o-oliveira" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-        <a href="https://www.linkedin.com/in/francisc-o-liveira/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
+  <!-- Main Content Section -->
+  <section id="main">
+    <div class="container">
+      <!-- Content will be inserted here -->
     </div>
-  </div>
+  </section>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
 
   <!-- Matrix Effect -->
   <script src="assets/js/matrix.js"></script>
 
   <!-- Mobile Navigation -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-      const navMenu = document.querySelector('.nav-menu');
-      const toggleIcon = mobileNavToggle.querySelector('i');
-
-      mobileNavToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('mobile-nav-active');
-        mobileNavToggle.classList.toggle('mobile-nav-active');
-        toggleIcon.classList.toggle('bx-menu');
-        toggleIcon.classList.toggle('bx-x');
-      });
-
-      // Close menu when clicking outside
-      document.addEventListener('click', function(e) {
-        if (!navMenu.contains(e.target) && !mobileNavToggle.contains(e.target) && navMenu.classList.contains('mobile-nav-active')) {
-          navMenu.classList.remove('mobile-nav-active');
-          mobileNavToggle.classList.remove('mobile-nav-active');
-          toggleIcon.classList.add('bx-menu');
-          toggleIcon.classList.remove('bx-x');
-        }
-      });
-    });
-  </script>
-
-  <!-- Typed.js Initialization -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      new Typed('.typed', {
-        strings: ["Software Engineer", "Network Engineer", "Developer", "Cybersecurity Enthusiast"],
-        typeSpeed: 50,
-        backSpeed: 30,
-        backDelay: 1000,
-        startDelay: 1000,
-        loop: true
-      });
-    });
-  </script>
+  <script src="assets/js/mobile-nav.js"></script>
 </body>
-</html>
+</html> 

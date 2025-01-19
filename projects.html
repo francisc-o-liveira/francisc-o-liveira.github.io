@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Projects - Francisco Oliveira</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5BB8W2X');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LLWL5N9CSM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LLWL5N9CSM');
+  </script>
+
+  <!-- Favicons -->
+  <link href="favicon.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Main CSS Files -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/matrix.css" rel="stylesheet">
+  
+  <style>
+    .projects-container {
+      padding: 30px 0;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
+
+    .col-lg-6 {
+      padding: 15px;
+      display: flex;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 20px rgba(18, 214, 64, 0.2);
+    }
+
+    .project-image {
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      width: 100%;
+    }
+
+    .project-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover .project-image img {
+      transform: scale(1.1);
+    }
+
+    .project-info {
+      padding: 25px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-info h3 {
+      color: #12d640;
+      font-size: 24px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .project-info p {
+      color: #fff;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .tech-stack {
+      margin-bottom: 20px;
+    }
+
+    .tech-tag {
+      display: inline-block;
+      padding: 5px 12px;
+      background: rgba(18, 214, 64, 0.1);
+      border: 1px solid #12d640;
+      border-radius: 20px;
+      color: #12d640;
+      font-size: 12px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .tech-tag:hover {
+      background: #12d640;
+      color: #000;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 15px;
+      margin-top: auto;
+    }
+
+    .project-links a {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 20px;
+      border-radius: 25px;
+      background: #12d640;
+      color: #000;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .project-links a i {
+      margin-right: 8px;
+      font-size: 16px;
+    }
+
+    .project-links a:hover {
+      background: #0fb636;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .project-info h3 {
+        font-size: 20px;
+      }
+
+      .project-info p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BB8W2X"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Matrix Canvas -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Mobile Navigation Toggle -->
+  <button type="button" class="mobile-nav-toggle d-lg-none">
+    <i class="bx bx-menu"></i>
+  </button>
+
+  <!-- Navigation -->
+  <nav class="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li class="active"><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="links.html">Resume & Links</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content Section -->
+  <section id="main">
+    <div class="container">
+      <div class="section-title">
+        <h2>Projects</h2>
+      </div>
+
+      <div class="projects-container">
+        <div class="row">
+          <!-- Network Monitoring Tool -->
+          <div class="col-lg-6">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="assets/img/project/AdsFreeWeb.png" alt="Network Monitoring Tool">
+              </div>
+              <div class="project-info">
+                <h3>AdsFreeWeb</h3>
+                <p>This browser extension is designed to eliminate intrusive ads across websites, ensuring a cleaner and more enjoyable browsing experience.</p>
+                <div class="tech-stack">
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">Add-ons/Extensions</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/francisc-o-liveira/AdsFreeWeb" target="_blank">
+                    <i class="bx bxl-github"></i> View Code
+                  </a>
+                  <a href="develop.html" target="_blank">
+                    <i class="bx bx-link-external"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Security Vulnerability Scanner -->
+          <div class="col-lg-6">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="assets/img/project/YoutubePlusExt2.png" alt="Security Vulnerability Scanner">
+              </div>
+              <div class="project-info">
+                <h3>Youtube Plus Extension</h3>
+                <p>This extension ensures uninterrupted YouTube sessions by blocking intrusive ads and offering a smoother video playback experience and also a YouTube Download MP3.</p>
+                <div class="tech-stack">
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">Add-ons/Extensions</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/francisc-o-liveira/YoutubePlus_extension" target="_blank">
+                    <i class="bx bxl-github"></i> View Code
+                  </a>
+                  <a href="develop.html" target="_blank">
+                    <i class="bx bx-link-external"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cloud Deployment Automation -->
+          <div class="col-lg-6">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="assets/img/project/Atlas.png" alt="Cloud Deployment Automation">
+              </div>
+              <div class="project-info">
+                <h3>Atlas Android Application</h3>
+                <p>Atlas is an Android application designed to help users plan and organize their travels. The app provides a user-friendly interface for managing trips, adjusting settings, and handling multiple languages.</p>
+                <div class="tech-stack">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">Kotlin</span>
+                  <span class="tech-tag">Spring</span>
+                  <span class="tech-tag">XML</span>
+                  <span class="tech-tag">Android</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/francisc-o-liveira/Atlas" target="_blank">
+                    <i class="bx bxl-github"></i> View Code
+                  </a>
+                  <a href="develop.html" target="_blank">
+                    <i class="bx bx-link-external"></i> Documentation
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Analytics Dashboard -->
+          <div class="col-lg-6">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="assets/img/project/GreenSpace.png" alt="Data Analytics Dashboard">
+              </div>
+              <div class="project-info">
+                <h3>Green Space Management</h3>
+                <p>This is an application used by a green space company to manage their collaborators, machines, equipment and vehicles to their tasks with an easy and fast way to interact. The application contains all the tools needed to manage, interact, or work with the company without difficulties or mistakes. It helps both the company teams and the managers of the company, or the ones who want to purchase a property.</p>
+                <div class="tech-stack">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">JavaFX</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/francisc-o-liveira/lei-24-s2-1dp-g163/blob/master/docs/sprintC/global-artifacts/user_manual.md" target="_blank">
+                    <i class="bx bxl-github"></i> View Code
+                  </a>
+                  <a href="develop.html" target="_blank">
+                    <i class="bx bx-link-external"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Matrix Effect -->
+  <script src="assets/js/matrix.js"></script>
+
+  <!-- Mobile Navigation -->
+  <script src="assets/js/mobile-nav.js"></script>
+
+</body>
+</html>
