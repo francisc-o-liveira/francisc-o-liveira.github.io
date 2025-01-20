@@ -31,6 +31,12 @@ This is a personal portfolio website showcasing Francisco Oliveira's professiona
 - Social media links
 - Project filtering
 - Google Analytics integration
+- Matrix background effect
+- Mobile-friendly navigation
+- Project showcase
+- Skills overview
+- Education timeline
+- Contact form with Formspree integration
 
 ## Technologies Used
 
@@ -44,6 +50,7 @@ This is a personal portfolio website showcasing Francisco Oliveira's professiona
     - Owl Carousel
     - Venobox
     - Isotope Layout
+- Formspree (for contact form)
 
 ### Development Tools
 - Git
@@ -143,3 +150,19 @@ This project is open-source. Please check the licensing details before using the
 ---
 
 **Note**: Remember to replace placeholder links and information with your actual details.
+
+## Contact Form
+
+The contact form is powered by Formspree, a form backend service that handles form submissions. The form is configured to:
+- Send submissions to francisc.o.liveira@outlook.com
+- Use the endpoint: https://formspree.io/f/mwppgrye
+- Handle success/error messages
+- Support file attachments
+- Provide spam filtering
+
+## Contact Form Setup
+
+To modify the contact form:
+1. Create your own Formspree account at https://formspree.io
+2. Replace the form action URL in contact.html with your own Formspree endpoint
+3. Update contact.js if you need to modify form handling behavior

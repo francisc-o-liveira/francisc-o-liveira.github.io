@@ -11,27 +11,27 @@ document.addEventListener('DOMContentLoaded', function() {
         errorMessage.style.display = 'none';
         sentMessage.style.display = 'none';
 
-        const formData = new FormData(this);
-
-        fetch('forms/contact.php', {
-            method: 'POST',
-            body: formData
+        fetch("https://formspree.io/f/mwppgrye", {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            },
         })
-        .then(response => response.json())
-        .then(data => {
-            loading.style.display = 'none';
-            
-            if (data.success) {
+        .then(response => {
+            if (response.ok) {
+                loading.style.display = 'none';
                 sentMessage.style.display = 'block';
                 form.reset();
             } else {
-                throw new Error('Message could not be sent');
+                throw new Error('Network response was not ok');
             }
         })
-        .catch(error => {
+        .catch((error) => {
             loading.style.display = 'none';
-            errorMessage.innerHTML = 'Message could not be sent';
+            errorMessage.textContent = 'Oops! There was a problem submitting your form';
             errorMessage.style.display = 'block';
+            console.error('Error:', error);
         });
     });
 }); 
