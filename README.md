@@ -92,36 +92,6 @@ portfolio/
 └── README.md
 ```
 
-## Customization
-
-To customize the portfolio:
-
-1. Update personal information in `index.html`
-2. Replace images in `assets/img/`
-3. Modify CSS in `assets/css/style.css`
-4. Update project details in `projects/` directory
-5. Replace Google Analytics and Google Tag Manager scripts with your own tracking IDs
-
-## Deployment
-
-### Hosting Options
-- GitHub Pages
-- Netlify
-- Vercel
-- Traditional web hosting
-
-### Deployment Steps
-1. Push your code to a GitHub repository
-2. Enable GitHub Pages in repository settings
-3. Configure custom domain (optional)
-
-## Performance Optimization
-
-- Minify CSS and JavaScript
-- Optimize images
-- Use lazy loading for images
-- Implement browser caching
-
 ## Browser Compatibility
 
 Tested and compatible with:
@@ -159,10 +129,3 @@ The contact form is powered by Formspree, a form backend service that handles fo
 - Handle success/error messages
 - Support file attachments
 - Provide spam filtering
-
-## Contact Form Setup
-
-To modify the contact form:
-1. Create your own Formspree account at https://formspree.io
-2. Replace the form action URL in contact.html with your own Formspree endpoint
-3. Update contact.js if you need to modify form handling behavior
